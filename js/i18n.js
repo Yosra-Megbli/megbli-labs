@@ -23,7 +23,8 @@ const I18N = {
         { t: "Launch & Operations", d: "Hosting, SSL, CI/CD and monitoring. You get a running product — not just code." }
       ]
     },
-    work: { eyebrow: "Selected work", h2: "Projects that shipped", view: "View project →", demo: "Watch demo", code: "Source code" },
+    work: { eyebrow: "Selected work", h2: "Projects that shipped", view: "View project →", demo: "Watch demo", code: "Source code", video: "Demo video",
+      more_h: "More projects", more_sub: "Internship and academic work by the team, each with a recorded demo." },
     process: {
       eyebrow: "How we work", h2: "From idea to product — in clear steps",
       steps: [
@@ -81,7 +82,8 @@ const I18N = {
         { t: "الإطلاق والتشغيل", d: "استضافة وشهادات أمان ونشر مستمر ومراقبة. تستلم منتجاً يعمل — لا مجرد كود." }
       ]
     },
-    work: { eyebrow: "أعمال مختارة", h2: "مشاريع شُيّدت وأُطلقت", view: "استعرض المشروع ←", demo: "شاهد الديمو", code: "الكود المصدري" },
+    work: { eyebrow: "أعمال مختارة", h2: "مشاريع شُيّدت وأُطلقت", view: "استعرض المشروع ←", demo: "شاهد الديمو", code: "الكود المصدري", video: "فيديو تجريبي",
+      more_h: "مشاريع أخرى", more_sub: "أعمال تدريب ودراسة أنجزها الفريق، لكل منها فيديو تجريبي مسجّل." },
     process: {
       eyebrow: "طريقة عملنا", h2: "من الفكرة إلى المنتج — بخطوات واضحة",
       steps: [
@@ -120,7 +122,8 @@ const I18N = {
 };
 
 // ===================== PROJECTS =====================
-// Status types: live | client | demo | rnd  (colors in CSS)
+// Status types: live | client | demo | rnd | personal | internship | academic  (colors in CSS)
+// Optional fields: video: { src, poster } (plays on the project page) · group: "more" (shows in "More projects")
 // TODO: add WeldTrack client name after written permission.
 // TODO: confirm naming "Ecofix" in Sophie before launch (repo is public already).
 
@@ -172,7 +175,7 @@ const PROJECTS = [
   {
     id: "jibli", initial: "J",
     cover: "linear-gradient(135deg,#ea580c,#7c2d12)",
-    image: "https://houssemmeguebli.github.io/assets/jibli-main.png",
+    image: "assets/projects/jibli/cover.jpg",
     tech: ["Spring Boot","Flutter","MySQL","Redis","Nginx","Prometheus / Grafana"],
     en: {
       title: "Jibli", tagline: "Food-delivery platform — live in production",
@@ -207,7 +210,7 @@ const PROJECTS = [
   {
     id: "weldtrack", initial: "W",
     cover: "linear-gradient(135deg,#1d4ed8,#1e3a8a)",
-    image: "https://houssemmeguebli.github.io/assets/altrad1.jpg",
+    image: "assets/projects/weldtrack/cover.jpg",
     tech: ["Spring Boot","Flutter (Mobile/Web)","MySQL","JWT","BLoC","Clean Architecture"],
     en: {
       title: "WeldTrack", tagline: "Welder qualification management — industrial client",
@@ -234,6 +237,44 @@ const PROJECTS = [
         "بطاقات تعريف CR80 مع QR قابلة للطباعة"
       ],
       links: { demo: "http://217.182.66.101/#/login" }
+    }
+  },
+
+  {
+    id: "zen", initial: "Z",
+    cover: "linear-gradient(135deg,#365314,#111a0a)",
+    image: "assets/projects/zen/poster.jpg",
+    video: { src: "assets/projects/zen/demo.mp4", poster: "assets/projects/zen/poster.jpg" },
+    tech: ["RAG","E5 embeddings","Row-level security","Multi-tenant","gpt-oss-120b (Groq)"],
+    en: {
+      title: "Zen Knowledge", tagline: "Internal knowledge assistant for multi-company groups",
+      status: { label: "Personal project", type: "personal" },
+      credit: "Yosra Megbli · 2026",
+      desc: "An assistant for organizations with several subsidiaries. Employees ask a question in plain language and get an answer built only from their own company's documents, with a source excerpt they can verify. When nothing relevant is found, it declines instead of guessing. Isolation between subsidiaries is enforced in the database, and admins get document-review alerts plus cost and latency monitoring.",
+      features: [
+        "Answers grounded in the company's own documents, with verifiable source excerpts",
+        "Declines to answer when no document is relevant enough — the LLM is not even called",
+        "Strict isolation between subsidiaries, enforced with row-level security",
+        "Local ingestion pipeline: extraction, chunking and E5 vectorization",
+        "Document governance: review dates, outdated-document alerts, one-click unpublishing",
+        "Admin dashboard: latency, cost per query, and unanswered questions that reveal documentation gaps"
+      ],
+      links: {}
+    },
+    ar: {
+      title: "Zen Knowledge", tagline: "مساعد معرفة داخلي للمجموعات متعددة الشركات",
+      status: { label: "مشروع شخصي", type: "personal" },
+      credit: "يسرى مقبلي · 2026",
+      desc: "مساعد للمؤسسات ذات الفروع المتعددة: يطرح الموظف سؤاله بلغته العادية فيحصل على إجابة مبنية فقط على وثائق شركته، مع مقتطف من المصدر يمكنه التحقق منه. وإذا لم يجد ما يكفي من المعلومات يمتنع عن الإجابة بدل التخمين. العزل بين الفروع مطبّق على مستوى قاعدة البيانات، وللإداريين تنبيهات مراجعة الوثائق ولوحة لمتابعة الكلفة وزمن الاستجابة.",
+      features: [
+        "إجابات مبنية على وثائق الشركة نفسها مع مقتطفات مصدر قابلة للتحقق",
+        "يمتنع عن الإجابة إذا لم توجد وثيقة ذات صلة كافية — دون استدعاء نموذج اللغة أصلاً",
+        "عزل صارم بين الفروع مطبّق عبر أمان مستوى الصف (RLS)",
+        "مسار استيعاب محلي: استخراج وتقطيع وتحويل إلى متجهات بنموذج E5",
+        "حوكمة الوثائق: تواريخ مراجعة وتنبيهات بالوثائق المتقادمة وإلغاء نشرها بنقرة",
+        "لوحة إدارة: زمن الاستجابة وكلفة كل سؤال والأسئلة بلا جواب التي تكشف نقص التوثيق"
+      ],
+      links: {}
     }
   },
 
@@ -268,6 +309,121 @@ const PROJECTS = [
         "قابل للنشر كمنتج مستقل"
       ],
       links: { code: "https://github.com/Yosra-Megbli/Intelligent-Sales-Agent" }
+    }
+  },
+
+  // ---------- More projects (internship & academic) ----------
+  {
+    id: "teleworkpro", initial: "T", group: "more",
+    cover: "linear-gradient(135deg,#0369a1,#0c4a6e)",
+    image: "assets/projects/teleworkpro/poster.jpg",
+    video: { src: "assets/projects/teleworkpro/demo.mp4", poster: "assets/projects/teleworkpro/poster.jpg" },
+    tech: [".NET Core","React","Entity Framework","SQL Server","Material-UI"],
+    en: {
+      title: "TeleWorkPro", tagline: "Remote-work request and scheduling platform",
+      status: { label: "Internship project", type: "internship" },
+      credit: "Houssem Meguebli · SHAMASH IT, 2024",
+      desc: "A web application built during an internship at SHAMASH IT to manage telecommuting requests and schedules. Employees submit requests, managers approve or reject them, and everyone follows the outcome on a shared calendar. Role-based access control cut request processing time by 40%.",
+      features: [
+        "Request workflow: submit, approve or reject, with status tracking",
+        "Calendar with month, week and day views",
+        "Requests table with status filter, search and PDF export",
+        "Employee management with role-based access",
+        "Secure password reset with a time-limited PIN code sent by email",
+        "Email notifications for account creation and request confirmations"
+      ],
+      links: {}
+    },
+    ar: {
+      title: "TeleWorkPro", tagline: "منصة لإدارة طلبات العمل عن بُعد وجداولها",
+      status: { label: "مشروع تدريب", type: "internship" },
+      credit: "حسام مقبلي · SHAMASH IT، 2024",
+      desc: "تطبيق ويب أُنجز خلال تدريب في SHAMASH IT لإدارة طلبات العمل عن بُعد وجداولها: يقدّم الموظف طلبه، ويوافق عليه المدير أو يرفضه، ويتابع الجميع النتيجة على تقويم مشترك. وقد خفّض التحكم في الصلاحيات حسب الدور زمن معالجة الطلبات بنسبة 40%.",
+      features: [
+        "مسار طلب كامل: تقديم، موافقة أو رفض، مع متابعة الحالة",
+        "تقويم بعرض شهري وأسبوعي ويومي",
+        "جدول طلبات مع تصفية بالحالة وبحث وتصدير PDF",
+        "إدارة الموظفين مع صلاحيات حسب الدور",
+        "استرجاع آمن لكلمة المرور برمز PIN محدود المدة يصل بالبريد",
+        "إشعارات بالبريد عند إنشاء الحساب وتأكيد الطلبات"
+      ],
+      links: {}
+    }
+  },
+
+  {
+    id: "coconsult", initial: "C", group: "more",
+    cover: "linear-gradient(135deg,#0f766e,#134e4a)",
+    image: "assets/projects/coconsult/poster.jpg",
+    video: { src: "assets/projects/coconsult/demo.mp4", poster: "assets/projects/coconsult/poster.jpg" },
+    tech: ["Spring","Angular","MySQL","Bootstrap"],
+    en: {
+      title: "CoConsult", tagline: "HR and recruitment management web app",
+      status: { label: "Academic project", type: "academic" },
+      credit: "Houssem Meguebli · ESPRIT",
+      desc: "A web application for small businesses and startups that brings recruitment, employee management and team follow-up into one place: job offers with resume upload, departments, contracts, leave requests and team tasks, plus a built-in chatbot and chat.",
+      features: [
+        "Job offers and applications with PDF resume upload",
+        "Departments, employee contracts and leave tracking",
+        "Team tasks with priorities and status",
+        "Employee claims management",
+        "Role-based dashboard with key indicators",
+        "Built-in chatbot and chat app"
+      ],
+      links: {}
+    },
+    ar: {
+      title: "CoConsult", tagline: "تطبيق ويب لإدارة الموارد البشرية والتوظيف",
+      status: { label: "مشروع أكاديمي", type: "academic" },
+      credit: "حسام مقبلي · ESPRIT",
+      desc: "تطبيق ويب للشركات الصغيرة والناشئة يجمع التوظيف وإدارة الموظفين ومتابعة الفريق في مكان واحد: عروض عمل مع رفع السيرة الذاتية، أقسام، عقود، طلبات إجازة ومهام فريق، إضافة إلى روبوت محادثة ودردشة مدمجين.",
+      features: [
+        "عروض عمل وطلبات ترشح مع رفع السيرة الذاتية بصيغة PDF",
+        "الأقسام وعقود الموظفين ومتابعة الإجازات",
+        "مهام الفريق بأولويات وحالات",
+        "إدارة شكاوى الموظفين",
+        "لوحة تحكم بمؤشرات رئيسية حسب الدور",
+        "روبوت محادثة وتطبيق دردشة مدمجان"
+      ],
+      links: {}
+    }
+  },
+
+  {
+    id: "infinityfarm", initial: "I", group: "more",
+    cover: "linear-gradient(135deg,#4d7c0f,#1a2e05)",
+    image: "assets/projects/infinityfarm/poster.jpg",
+    video: { src: "assets/projects/infinityfarm/demo.mp4", poster: "assets/projects/infinityfarm/poster.jpg" },
+    tech: ["Symfony","JavaScript","MySQL","Bootstrap"],
+    en: {
+      title: "InfinityFarm", tagline: "Farm management platform",
+      status: { label: "Academic project", type: "academic" },
+      credit: "Houssem Meguebli · ESPRIT team project",
+      desc: "A web platform that helps farmers run daily operations: organizing farm sites and land plots, tracking equipment and activities, and following income and expenses, with built-in messaging and statistics.",
+      features: [
+        "Farm sites and land plots with search and filters",
+        "Equipment tracking per site, with condition status",
+        "Activity planning with status tracking",
+        "Financial transactions grouped by category",
+        "Messages, complaints and statistics",
+        "Built-in chat"
+      ],
+      links: {}
+    },
+    ar: {
+      title: "InfinityFarm", tagline: "منصة لإدارة المزارع",
+      status: { label: "مشروع أكاديمي", type: "academic" },
+      credit: "حسام مقبلي · مشروع فريق في ESPRIT",
+      desc: "منصة ويب تساعد الفلاحين على تسيير عملهم اليومي: تنظيم المواقع الزراعية والقطع الأرضية، متابعة المعدات والأنشطة، ومراقبة المداخيل والمصاريف، مع مراسلة وإحصائيات مدمجة.",
+      features: [
+        "المواقع الزراعية والقطع الأرضية مع بحث وتصفية",
+        "متابعة المعدات لكل موقع وحالتها",
+        "تخطيط الأنشطة ومتابعة حالتها",
+        "المعاملات المالية مصنّفة حسب الفئة",
+        "رسائل وشكاوى وإحصائيات",
+        "دردشة مدمجة"
+      ],
+      links: {}
     }
   }
 ];
