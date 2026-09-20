@@ -333,6 +333,9 @@ section {
 .badge.personal { background: #cffafe; color: #155e75; }
 .badge.internship { background: #fce7f3; color: #9d174d; }
 .badge.academic { background: #e0e7ff; color: #3730a3; }
+.badge.tested { background: #e0f2fe; color: #075985; }
+.badge.prototype { background: #fef3c7; color: #92400e; }
+.badge.neutral { background: #eef2f6; color: #475569; }
 
 .process {
   list-style: none;

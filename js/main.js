@@ -113,7 +113,10 @@ function setLang(lang) {
   document.querySelectorAll('[data-i18n]').forEach(el => { const value = t(el.dataset.i18n); if (typeof value === 'string') el.textContent = value; });
   document.querySelectorAll('[data-wa]').forEach(a => { a.href = `https://wa.me/21628771979?text=${encodeURIComponent(t('contact.wa_text'))}`; });
   const toggle = $('#lang-toggle');
-  if (toggle) toggle.textContent = LANG === 'en' ? 'العربية' : 'EN';
+  if (toggle) {
+    toggle.textContent = LANG === 'en' ? 'العربية' : 'EN';
+    toggle.setAttribute('aria-label', LANG === 'en' ? 'Switch language to Arabic' : 'التبديل إلى الإنجليزية');
+  }
   const footer = $('[data-i18n="footer"]');
   if (footer) footer.textContent = t('footer').replace('{year}', new Date().getFullYear());
   renderServices(); renderProcess(); renderTeam(); renderProjects();
