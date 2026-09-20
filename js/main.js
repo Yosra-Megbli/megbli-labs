@@ -39,6 +39,22 @@ function badge(status) {
   return `<span class="badge ${statusClass(status)}">${esc(status)}</span>`;
 }
 
+const hasDemo = p => Boolean(p.demoAccess && ((p.demoAccess.user && p.demoAccess.pass) || p.demoAccess.key));
+
+function demoBox(p) {
+  const da = p.demoAccess;
+  if (!da) return '';
+  const m = t('project');
+  if (hasDemo(p)) {
+    const field = (label, value) => `<div><dt>${esc(label)}</dt><dd><code dir="ltr">${esc(value)}</code></dd></div>`;
+    const fields = da.key ? field(m.demoKey, da.key) : field(m.demoUser, da.user) + field(m.demoPass, da.pass);
+    return `<section class="demo-box"><h3>${esc(m.demoTitle)}</h3><p>${esc(m.demoNote)}</p><dl class="cred">${fields}</dl><a class="btn btn-primary" href="${esc(da.url)}" target="_blank" rel="noopener">${esc(m.demoOpen)} ↗</a></section>`;
+  }
+  const msg = encodeURIComponent(m.demoRequestText.replace('{name}', p.title));
+  const subject = encodeURIComponent(m.demoRequestSubject.replace('{name}', p.title));
+  return `<section class="demo-box"><h3>${esc(m.demoTitle)}</h3><p>${esc(m.demoLocked)}</p><div class="pactions"><a class="btn btn-wa" href="https://wa.me/21628771979?text=${msg}" target="_blank" rel="noopener">${esc(m.demoRequest)}</a><a class="btn btn-mail" href="mailto:yosra.meguebli@yahoo.fr?subject=${subject}">Email</a></div></section>`;
+}
+
 function renderServices() {
   const el = $('#services-grid');
   if (!el) return;
@@ -77,7 +93,8 @@ function projectCard(project) {
   const p = localizedProject(project);
   const w = t('work');
   const credit = p.credit ? `<span class="credit">${esc(p.credit)}</span>` : '';
-  const actions = `<a href="project.html?p=${encodeURIComponent(p.id)}">${esc(w.view)}</a>${p.links && p.links.demo && !p.video ? `<a href="${esc(p.links.demo)}" target="_blank" rel="noopener">${esc(w.demo)} ↗</a>` : ''}${p.video ? `<a href="project.html?p=${encodeURIComponent(p.id)}">${esc(w.video)}</a>` : ''}${p.links && p.links.code ? `<a href="${esc(p.links.code)}" target="_blank" rel="noopener">${esc(w.code)} ↗</a>` : ''}`;
+  const demoLink = hasDemo(p) ? `<a href="${esc(p.demoAccess.url)}" target="_blank" rel="noopener">${esc(w.demo)} ↗</a>` : '';
+  const actions = `<a href="project.html?p=${encodeURIComponent(p.id)}">${esc(w.view)}</a>${demoLink}${p.links && p.links.demo && !p.video ? `<a href="${esc(p.links.demo)}" target="_blank" rel="noopener">${esc(w.demo)} ↗</a>` : ''}${p.video ? `<a href="project.html?p=${encodeURIComponent(p.id)}">${esc(w.video)}</a>` : ''}${p.links && p.links.code ? `<a href="${esc(p.links.code)}" target="_blank" rel="noopener">${esc(w.code)} ↗</a>` : ''}`;
   const background = p.image ? `url('${p.image}') top center/cover no-repeat` : p.cover;
   const initial = p.image ? '' : `<span class="initial">${esc(project.initial || project.title[0])}</span>`;
   return `<article class="card project"><a class="cover" href="project.html?p=${encodeURIComponent(p.id)}" aria-label="${esc(p.title)}" style="background:${background}">${initial}<span class="project-index">${esc(p.no || '')}</span></a><div class="body"><div class="meta">${badge(p.status)}${credit}</div><h3>${esc(p.title)}</h3><p class="tagline">${esc(p.tagline)}</p><p class="desc">${esc(p.desc)}</p><div class="chips">${p.tech.map(x => `<span class="chip">${esc(x)}</span>`).join('')}</div><div class="links">${actions}</div></div></article>`;
@@ -100,7 +117,7 @@ function renderProjectPage() {
   const media = p.video ? `<div class="pvideo"><video controls playsinline preload="metadata" poster="${esc(p.video.poster)}"><source src="${esc(p.video.src)}" type="video/mp4">Your browser does not support HTML5 video.</video></div>` : `<div class="pcover" style="background:${p.image ? `url('${p.image}') top center/cover no-repeat` : p.cover}">${p.image ? '' : `<span>${esc(project.initial || project.title[0])}</span>`}</div>`;
   const gallery = p.gallery ? `<div class="gallery">${p.gallery.map(src => `<img src="${esc(src)}" loading="lazy" alt="${esc(p.title)}">`).join('')}</div>` : '';
   const credit = p.credit ? `<span class="credit">${esc(p.credit)}</span>` : '';
-  root.innerHTML = `<a class="backlink" href="index.html">${esc(t('back'))}</a><div class="phead"><div class="meta">${badge(p.status)}${credit}</div><h1>${esc(p.title)}</h1><p class="tagline">${esc(p.tagline)}</p></div>${media}${gallery}<p class="desc-lg">${esc(p.desc)}</p><div class="detail-grid"><article class="detail-card"><h3>${esc(meta.problem)}</h3><p>${esc(p.problem || p.desc)}</p></article><article class="detail-card"><h3>${esc(meta.solution)}</h3><p>${esc(p.solution || p.tagline)}</p></article></div><ul class="features">${p.features.map(x => `<li>${esc(x)}</li>`).join('')}</ul><div class="tech-block"><div class="chips">${p.tech.map(x => `<span class="chip">${esc(x)}</span>`).join('')}</div></div><div class="detail-grid"><article class="detail-card"><h3>${esc(meta.status)}</h3><p>${esc(p.status)}</p></article><article class="detail-card"><h3>${esc(meta.links)}</h3><div class="pactions">${linkMarkup(p, true) || '—'}</div></article></div>`;
+  root.innerHTML = `<a class="backlink" href="index.html">${esc(t('back'))}</a><div class="phead"><div class="meta">${badge(p.status)}${credit}</div><h1>${esc(p.title)}</h1><p class="tagline">${esc(p.tagline)}</p></div>${media}${gallery}<p class="desc-lg">${esc(p.desc)}</p>${demoBox(p)}<div class="detail-grid"><article class="detail-card"><h3>${esc(meta.problem)}</h3><p>${esc(p.problem || p.desc)}</p></article><article class="detail-card"><h3>${esc(meta.solution)}</h3><p>${esc(p.solution || p.tagline)}</p></article></div><ul class="features">${p.features.map(x => `<li>${esc(x)}</li>`).join('')}</ul><div class="tech-block"><div class="chips">${p.tech.map(x => `<span class="chip">${esc(x)}</span>`).join('')}</div></div><div class="detail-grid"><article class="detail-card"><h3>${esc(meta.status)}</h3><p>${esc(p.status)}</p></article><article class="detail-card"><h3>${esc(meta.links)}</h3><div class="pactions">${linkMarkup(p, true) || '—'}</div></article></div>`;
 }
 
 function setLang(lang) {
