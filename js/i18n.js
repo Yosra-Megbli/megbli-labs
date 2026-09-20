@@ -1,435 +1,351 @@
 // ===================== MEGBLI LABS — CONTENT =====================
-// Edit texts here. Both languages live side by side.
+// Keep the Arabic language system intact and update the English copy for the client-focused portfolio.
 
 const I18N = {
   en: {
-    meta_title: "Megbli Labs — Web, Mobile & AI products",
-    nav: { work: "Work", services: "Services", process: "Process", team: "Team", contact: "Contact" },
+    meta_title: "Megbli Labs | AI, Backend & Automation Solutions",
+    meta_description: "Megbli Labs builds AI-powered applications, backend systems, RAG platforms, document intelligence solutions and intelligent automation.",
+    nav: { work: "Recent Projects", services: "Services", process: "Process", team: "Team", contact: "Contact" },
     hero: {
-      eyebrow: "Boutique software studio — Tunisia-based, working worldwide",
-      h1: "We turn ideas into working digital products.",
-      sub: "Megbli Labs is a three-engineer team building web platforms, mobile apps and AI-powered systems — from first sketch to production.",
-      c1: "Web", c2: "Mobile", c3: "AI", c4: "SaaS",
-      cta1: "Start a project", cta2: "See our work",
-      trust: "ESPRIT-trained engineers · Products running in production · Direct communication, no middlemen"
+      eyebrow: "AI engineering · backend systems · automation",
+      h1: "AI, Backend & Automation Solutions",
+      sub: "We build practical AI-powered applications, backend systems and intelligent automation — from document intelligence and RAG systems to AI agents and business platforms.",
+      c1: "AI", c2: "Backend", c3: "Automation", c4: "LLM / RAG",
+      cta1: "View Recent Projects",
+      cta2: "Contact Us",
+      trust: "Small engineering team · practical AI systems · backend reliability"
     },
     services: {
-      eyebrow: "Services", h2: "What we build",
+      eyebrow: "Services",
+      h2: "Services",
       items: [
-        { t: "Web Applications", d: "Business platforms, dashboards, portals and custom web applications built for speed and clarity." },
-        { t: "Mobile Applications", d: "Cross-platform Android & iOS apps from a single codebase (Flutter), connected to solid backends." },
-        { t: "AI & Automation", d: "Conversational agents, document intelligence, RAG systems, ML models and workflow automation." },
-        { t: "Backend & APIs", d: "Secure REST APIs, databases, integrations and architectures designed to scale." },
-        { t: "Launch & Operations", d: "Hosting, SSL, CI/CD and monitoring. You get a running product — not just code." }
+        { t: "AI Engineering", d: "LLM applications, RAG systems, AI agents, document intelligence, and AI evaluation workflows." },
+        { t: "Backend Engineering", d: "FastAPI, Django REST, PostgreSQL, Redis / Celery, and API integration for reliable systems." },
+        { t: "Intelligent Automation", d: "n8n automation, workflow orchestration, API integrations and business process automation." },
+        { t: "Web & Mobile Development", d: "Business platforms, admin dashboards, web applications, and mobile applications tailored to real workflows." }
       ]
     },
-    work: { eyebrow: "Selected work", h2: "Projects that shipped", view: "View project →", demo: "Watch demo", code: "Source code", video: "Demo video",
-      more_h: "More projects", more_sub: "Internship and academic work by the team, each with a recorded demo." },
+    work: {
+      eyebrow: "Recent Projects",
+      h2: "Recent Projects",
+      subtitle: "Selected AI, backend and automation systems we've recently built and tested.",
+      view: "View project",
+      demo: "View demo",
+      code: "GitHub",
+      video: "Demo video",
+      more_h: "More projects",
+      more_sub: "Additional work by the team."
+    },
     process: {
-      eyebrow: "How we work", h2: "From idea to product — in clear steps",
+      eyebrow: "Process",
+      h2: "How we work",
       steps: [
-        { t: "Discovery", d: "We understand your idea, users and goals — and what “done” means." },
-        { t: "Scope & MVP", d: "We define the essential features, the timeline and a transparent quote." },
-        { t: "Design", d: "Screens and user flows validated with you before development starts." },
-        { t: "Build", d: "Development in weekly sprints, with progress you can actually see." },
-        { t: "Test & Launch", d: "Automated testing, production deployment and monitoring." },
-        { t: "Support", d: "Fixes, improvements and maintenance — exactly as agreed." }
+        { t: "01 — Understand", d: "Understand the business problem, requirements and constraints." },
+        { t: "02 — Design", d: "Define the architecture, workflow and technical approach." },
+        { t: "03 — Build", d: "Develop, integrate and test the solution." },
+        { t: "04 — Deliver", d: "Validate the system and prepare it for deployment or client integration." }
       ]
     },
     team: {
-      eyebrow: "The team", h2: "Three engineers. One team.",
-      intro: "Two brothers and a sister — all software engineers trained at ESPRIT. You talk directly to the people who build your product.",
+      eyebrow: "Our Team",
+      h2: "Our Team",
+      intro: "A small specialized engineering team building AI, backend and automation systems.",
       members: [
-        { initial: "Y", color: "#0d9488", name: "Yosra Megbli", role: "AI & Backend Engineer",
-          bio: "Specialized in AI-powered products: LLM pipelines, RAG, agents and scalable backends. Published researcher (Springer, 2020) and tech lead on an enterprise document-intelligence system with 99.7% accuracy.",
-          skills: ["Python","FastAPI","Django","LLM / RAG","LangGraph","Machine Learning"] },
-        { initial: "H", color: "#1d4ed8", name: "Houssem Meguebli", role: "Full-Stack & Mobile Engineer",
-          bio: "Builds web platforms and cross-platform mobile apps end-to-end — including deployment, monitoring and DevOps. Shipped production systems for a food-delivery platform and an industrial client.",
-          skills: ["Spring Boot","Flutter","Angular / React","Docker / Nginx","CI/CD","MySQL / PostgreSQL"] },
-        { initial: "M", color: "#b45309", name: "Mohamed Anouar Meguebli", role: "SaaS & ML Engineer",
-          bio: "Author of SmartCampus TN — a multi-tenant school-management SaaS with integrated AI, 1,000+ automated tests and a real production deployment.",
-          skills: ["Django","SaaS Architecture","Machine Learning","Computer Vision","PostgreSQL"] }
+        { initial: "Y", color: "#0f766e", name: "Yosra Megbli", role: "AI & Backend Engineer",
+          bio: "AI systems, LLM/RAG, document intelligence, FastAPI/Django, LangGraph, and backend engineering research and implementation.",
+          skills: ["AI systems","LLM / RAG","Document Intelligence","FastAPI / Django","LangGraph"] },
+        { initial: "H", color: "#1d4ed8", name: "Houssem Megbli", role: "Full-Stack & Backend Engineer",
+          bio: "Web applications, APIs, system integration and practical backend delivery for business platforms and connected workflows.",
+          skills: ["Full-Stack","Backend","APIs","Systems Integration","Databases"] },
+        { initial: "M", color: "#b45309", name: "Mohamed Anouar Megbli", role: "Collaborator",
+          bio: "Full-stack and AI engineering support with a focus on practical implementation and collaborative delivery.",
+          skills: ["Full-Stack","AI Engineering","Product Delivery","Implementation"] }
       ]
     },
+    project: {
+      problem: "Problem",
+      solution: "Solution",
+      workflow: "Architecture / Workflow",
+      results: "Results / Technical Highlights",
+      status: "Status",
+      links: "Links"
+    },
     contact: {
-      eyebrow: "Contact", h2: "Have an idea? Let's talk.",
-      sub: "Tell us about your project — we usually reply the same day. First consultation is free, quotes are clear, and payments are staged.",
-      wa: "Chat on WhatsApp", mail: "Send an email",
+      eyebrow: "Contact",
+      h2: "Have a project in mind?",
+      sub: "Tell us what you are building, what problem you want to solve, and what you need.",
+      wa: "Start a conversation",
+      mail: "Email us",
       wa_text: "Hello Megbli Labs, I'd like to discuss a project."
     },
-    footer: "© {year} Megbli Labs — built by the team it presents.",
+    footer: "© {year} Megbli Labs",
     back: "← Back to all projects"
   },
 
   ar: {
-    meta_title: "Megbli Labs — منتجات ويب وموبايل وذكاء اصطناعي",
-    nav: { work: "أعمالنا", services: "خدماتنا", process: "طريقة عملنا", team: "الفريق", contact: "تواصل" },
+    meta_title: "Megbli Labs | حلول الذكاء الاصطناعي والـ Backend والأتمتة",
+    meta_description: "تقوم Megbli Labs ببناء تطبيقات مدعومة بالذكاء الاصطناعي، أنظمة الخلفية، ومنصات RAG، وحلول الذكاء على المستندات، والأتمتة الذكية.",
+    nav: { work: "المشاريع الأخيرة", services: "الخدمات", process: "العملية", team: "الفريق", contact: "تواصل" },
     hero: {
-      eyebrow: "استوديو برمجي — من تونس، نعمل مع العالم",
-      h1: "نحوّل الأفكار إلى منتجات رقمية تعمل فعلاً.",
-      sub: "Megbli Labs فريق من ثلاثة مهندسين نبني منصات ويب وتطبيقات موبايل وأنظمة ذكاء اصطناعي — من أول سطر حتى الإطلاق.",
-      c1: "ويب", c2: "موبايل", c3: "ذكاء اصطناعي", c4: "SaaS",
-      cta1: "ابدأ مشروعك", cta2: "شاهد أعمالنا",
-      trust: "مهندسون خريجو ESPRIT · منتجات تعمل في الإنتاج · تواصل مباشر بلا وسطاء"
+      eyebrow: "هندسة ذكاء اصطناعي · أنظمة خلفية · أتمتة",
+      h1: "حلول الذكاء الاصطناعي والـ Backend والأتمتة",
+      sub: "نُصمّم تطبيقات عملية مدعومة بالذكاء الاصطناعي، وأنظمة خلفية، وأتمتة ذكية — من أنظمة استخراج المستندات وRAG إلى وكلاء الذكاء والمنصات التشغيلية.",
+      c1: "ذكاء اصطناعي", c2: "Backend", c3: "أتمتة", c4: "LLM / RAG",
+      cta1: "عرض المشاريع الأخيرة",
+      cta2: "تواصل معنا",
+      trust: "فريق صغير متخصص · أنظمة ذكاء عملية · موثوقية backend"
     },
     services: {
-      eyebrow: "خدماتنا", h2: "ماذا نبني؟",
+      eyebrow: "الخدمات",
+      h2: "الخدمات",
       items: [
-        { t: "تطبيقات ويب", d: "منصات أعمال ولوحات تحكم وبوابات وتطبيقات ويب مخصصة، سريعة وواضحة." },
-        { t: "تطبيقات موبايل", d: "تطبيقات أندرويد و iOS بكود واحد (Flutter) مربوطة بخوادم متينة." },
-        { t: "ذكاء اصطناعي وأتمتة", d: "وكلاء محادثة، معالجة مستندات، أنظمة RAG، نماذج تعلّم آلي، وأتمتة سير العمل." },
-        { t: "خوادم و APIs", d: "واجهات REST آمنة، قواعد بيانات، تكاملات، ومعماريات مصممة للتوسع." },
-        { t: "الإطلاق والتشغيل", d: "استضافة وشهادات أمان ونشر مستمر ومراقبة. تستلم منتجاً يعمل — لا مجرد كود." }
+        { t: "هندسة الذكاء الاصطناعي", d: "تطبيقات LLM، أنظمة RAG، وكلاء AI، ذكاء المستندات، وسير عمل تقييم الذكاء." },
+        { t: "هندسة الـ Backend", d: "FastAPI، Django REST، PostgreSQL، Redis / Celery، وتكامل واجهات موثوقة." },
+        { t: "الأتمتة الذكية", d: "أتمتة n8n، تنظيم سير العمل، تكامل APIs، وأتمتة العمليات التجارية." },
+        { t: "تطوير الويب والموبايل", d: "منصات أعمال ولوحات تحكم وتطبيقات ويب وتطبيقات موبايل مصممة لسير العمل الحقيقي." }
       ]
     },
-    work: { eyebrow: "أعمال مختارة", h2: "مشاريع شُيّدت وأُطلقت", view: "استعرض المشروع ←", demo: "شاهد الديمو", code: "الكود المصدري", video: "فيديو تجريبي",
-      more_h: "مشاريع أخرى", more_sub: "أعمال تدريب ودراسة أنجزها الفريق، لكل منها فيديو تجريبي مسجّل." },
+    work: {
+      eyebrow: "المشاريع الأخيرة",
+      h2: "المشاريع الأخيرة",
+      subtitle: "أنظمة مختارة في الذكاء الاصطناعي والـ backend والأتمتة تم تطويرها واختبارها مؤخراً.",
+      view: "عرض المشروع",
+      demo: "عرض العرض",
+      code: "GitHub",
+      video: "عرض فيديو",
+      more_h: "مشاريع أخرى",
+      more_sub: "أعمال إضافية للفريق."
+    },
     process: {
-      eyebrow: "طريقة عملنا", h2: "من الفكرة إلى المنتج — بخطوات واضحة",
+      eyebrow: "العملية",
+      h2: "طريقة عملنا",
       steps: [
-        { t: "الاستكشاف", d: "نفهم فكرتك ومستخدميها وأهدافها — وماذا يعني «جاهز»." },
-        { t: "النطاق و MVP", d: "نحدد الميزات الأساسية والمدة وعرض سعر واضح." },
-        { t: "التصميم", d: "شاشات ومسارات مستخدم نعتمدها معك قبل بدء التطوير." },
-        { t: "البناء", d: "تطوير على دفعات أسبوعية، بمتابعة تراها بنفسك." },
-        { t: "الاختبار والإطلاق", d: "اختبارات آلية، نشر في الإنتاج، ومراقبة." },
-        { t: "الدعم", d: "إصلاحات وتحسينات وصيانة — وفق الاتفاق." }
+        { t: "01 — الفهم", d: "فهم المشكلة، المتطلبات والقيود." },
+        { t: "02 — التصميم", d: "تحديد البنية التقنية، سير العمل، والمنهج العملي." },
+        { t: "03 — البناء", d: "تطوير، تكامل، واختبار الحل." },
+        { t: "04 — التسليم", d: "التحقق من النظام وإعداد الترحيل أو التكامل مع العميل." }
       ]
     },
     team: {
-      eyebrow: "الفريق", h2: "ثلاثة مهندسين. فريق واحد.",
-      intro: "أخوان وأخت — كلهم مهندسو معلومية خريجو ESPRIT. تتحدث مباشرة مع من يبني منتجك.",
+      eyebrow: "الفريق",
+      h2: "الفريق",
+      intro: "فريق صغير متخصص في بناء أنظمة الذكاء الاصطناعي والـ backend والأتمتة.",
       members: [
-        { initial: "Y", color: "#0d9488", name: "يسرى مقبلي", role: "مهندسة ذكاء اصطناعي و Backend",
-          bio: "متخصصة في المنتجات المدعومة بالذكاء الاصطناعي: أنظمة LLM و RAG والوكلاء والخوادم القابلة للتوسع. باحثة منشورة (Springer، 2020) وقائدة فريق على نظام مؤسسي لمعالجة المستندات بدقة 99.7%.",
-          skills: ["Python","FastAPI","Django","LLM / RAG","LangGraph","Machine Learning"] },
-        { initial: "H", color: "#1d4ed8", name: "حسام مقبلي", role: "مهندس Full-Stack وموبايل",
-          bio: "يبني منصات الويب وتطبيقات الموبايل من طرف إلى طرف — بما يشمل النشر والمراقبة و DevOps. سلّم أنظمة تعمل في الإنتاج لمنصة توصيل طعام ولعميل صناعي.",
-          skills: ["Spring Boot","Flutter","Angular / React","Docker / Nginx","CI/CD","MySQL / PostgreSQL"] },
-        { initial: "M", color: "#b45309", name: "محمد أنور مقبلي", role: "مهندس SaaS وتعلّم آلي",
-          bio: "صاحب مشروع SmartCampus TN — منصة SaaS متعددة المدارس بذكاء اصطناعي مدمج، بأكثر من 1000 اختبار آلي ونشر حقيقي في الإنتاج.",
-          skills: ["Django","SaaS Architecture","Machine Learning","Computer Vision","PostgreSQL"] }
+        { initial: "Y", color: "#0f766e", name: "يسرى مقبلي", role: "مهندسة الذكاء الاصطناعي والـ Backend",
+          bio: "أنظمة الذكاء الاصطناعي، LLM/RAG، ذكاء المستندات، FastAPI/Django، LangGraph، وبناء حلول مستقبلية في الهندسة الخلفية.",
+          skills: ["أنظمة AI","LLM / RAG","ذكاء المستندات","FastAPI / Django","LangGraph"] },
+        { initial: "H", color: "#1d4ed8", name: "حسام مقبلي", role: "مهندس Full-Stack والـ Backend",
+          bio: "تطبيقات الويب، واجهات البرمجة، تكامل الأنظمة، وتقديم حلول خلفية عملية لمنصات الأعمال.",
+          skills: ["Full-Stack","Backend","واجهات برمجة","تكامل الأنظمة","قواعد البيانات"] },
+        { initial: "M", color: "#b45309", name: "محمد أنور مقبلي", role: "مساهم",
+          bio: "دعم في الهندسة Full-Stack والذكاء الاصطناعي مع تركيز على التنفيذ العملي والتسليم المشترك.",
+          skills: ["Full-Stack","هندسة AI","تسليم المنتج","التنفيذ"] }
       ]
     },
-    contact: {
-      eyebrow: "تواصل", h2: "لديك فكرة؟ لنبدأ الحديث.",
-      sub: "أخبرنا عن مشروعك — نرد عادة في نفس اليوم. الاستشارة الأولى مجانية، وعروض الأسعار واضحة، والدفع على مراحل.",
-      wa: "راسلنا على واتساب", mail: "أرسل بريداً إلكترونياً",
-      wa_text: "مرحباً Megbli Labs، أرغب في مناقشة مشروع."
+    project: {
+      problem: "المشكلة",
+      solution: "الحل",
+      workflow: "البنية / سير العمل",
+      results: "النتائج / النقاط التقنية",
+      status: "الحالة",
+      links: "الروابط"
     },
-    footer: "© {year} Megbli Labs — بناه الفريق الذي يعرضه.",
-    back: "← عودة إلى كل المشاريع"
+    contact: {
+      eyebrow: "تواصل",
+      h2: "هل لديك مشروع في ذهنك؟",
+      sub: "أخبرنا بما تبنيه، وما المشكلة التي تريد حلها، وما الذي تحتاجه.",
+      wa: "ابدأ محادثة",
+      mail: "راسلنا بالبريد",
+      wa_text: "مرحباً Megbli Labs، أود مناقشة مشروع."
+    },
+    footer: "© {year} Megbli Labs",
+    back: "← العودة إلى كل المشاريع"
   }
 };
 
-// ===================== PROJECTS =====================
-// Status types: live | client | demo | rnd | personal | internship | academic  (colors in CSS)
-// Optional fields: video: { src, poster } (plays on the project page) · group: "more" (shows in "More projects")
-// TODO: add WeldTrack client name after written permission.
-// TODO: confirm naming "Ecofix" in Sophie before launch (repo is public already).
-
 const PROJECTS = [
   {
-    id: "smartcampus", initial: "S",
-    cover: "linear-gradient(135deg,#0f766e,#134e4a)",
-    image: "assets/projects/smartcampus/assistant-ia-clean.png",
-    gallery: [
-      "assets/projects/smartcampus/assistant-ia-clean.png",
-      "assets/projects/smartcampus/assistant-ia.png",
-      "assets/projects/smartcampus/notes.png",
-      "assets/projects/smartcampus/paiements.png",
-      "assets/projects/smartcampus/presences.png"
-    ],
-    tech: ["Django","PostgreSQL + pgvector","Celery / Redis","scikit-learn","YOLOv8","Docker","CI/CD"],
+    id: "sophie",
+    no: "01",
+    initial: "S",
+    cover: "linear-gradient(135deg,#6d28d9,#4c1d95)",
+    tech: ["FastAPI","LLM","Groq","React","YAML Rules Engine","Telegram / Web"],
     en: {
-      title: "SmartCampus TN", tagline: "School-management SaaS with built-in AI",
-      status: { label: "Flagship project", type: "demo" },
-      credit: "Mohamed Anouar Meguebli · 2026",
-      desc: "A multi-tenant platform for Tunisian private primary schools: enrollment, ministry-compliant grading, bilingual report cards, parent portal and payments — enriched with three AI modules: a per-student RAG assistant, ML-based retention prediction, and computer-vision security. Deployed in production with full CI/CD and 1,000+ automated tests.",
-      features: [
-        "Multi-tenant SaaS: many schools, one platform",
-        "Ministry-compliant grading & bilingual (AR/FR) report cards",
-        "Per-student RAG assistant with cited answers",
-        "ML prediction of non-re-enrollment, explained with SHAP",
-        "Computer-vision security service (YOLOv8)",
-        "1,000+ automated tests · production deployment with CI/CD"
-      ],
-      links: {}
-    },
-    ar: {
-      title: "SmartCampus TN", tagline: "منصة SaaS لإدارة المدارس بذكاء اصطناعي مدمج",
-      status: { label: "مشروع مرجعي", type: "demo" },
-      credit: "محمد أنور مقبلي · 2026",
-      desc: "منصة متعددة المدارس لإدارة المدارس الابتدائية الخاصة في تونس: التسجيل، النقاط المطابقة لقواعد الوزارة، بوالص ثنائية اللغة، بوابة أولياء ومدفوعات — مع ثلاث وحدات ذكاء اصطناعي: مساعد RAG لكل تلميذ، توقّع عدم إعادة التسجيل بالتعلّم الآلي، وأمن بالرؤية الحاسوبية. منشورة في الإنتاج مع CI/CD كامل وأكثر من 1000 اختبار آلي.",
-      features: [
-        "معمارية SaaS متعددة المستأجرين: عدة مدارس على منصة واحدة",
-        "نظام نقاط مطابق للوزارة وبوالص ثنائية اللغة (عربي/فرنسي)",
-        "مساعد ذكي لكل تلميذ بإجابات موثّقة بالمصادر (RAG)",
-        "توقّع عدم إعادة التسجيل بالتعلّم الآلي مع تفسير القرار (SHAP)",
-        "وحدة أمن بالرؤية الحاسوبية (YOLOv8)",
-        "أكثر من 1000 اختبار آلي · نشر في الإنتاج مع CI/CD"
-      ],
-      links: {}
-    }
-  },
-
-  {
-    id: "jibli", initial: "J",
-    cover: "linear-gradient(135deg,#ea580c,#7c2d12)",
-    image: "assets/projects/jibli/cover.jpg",
-    tech: ["Spring Boot","Flutter","MySQL","Redis","Nginx","Prometheus / Grafana"],
-    en: {
-      title: "Jibli", tagline: "Food-delivery platform — live in production",
-      status: { label: "Live in production", type: "live" },
-      credit: "Houssem Meguebli",
-      desc: "A complete delivery system connecting customers, restaurants and couriers: real-time ordering, delivery tracking and multi-role dashboards. Deployed on a VPS with SSL and a full monitoring stack (Prometheus + Grafana).",
-      features: [
-        "Real-time order processing",
-        "Live delivery tracking",
-        "Restaurant & admin dashboards",
-        "Redis-powered performance optimization",
-        "Production monitoring with Prometheus & Grafana"
-      ],
-      links: { demo: "https://jibli.ovh" }
-    },
-    ar: {
-      title: "جيبلِي", tagline: "منصة توصيل طعام — تعمل في الإنتاج",
-      status: { label: "يعمل في الإنتاج", type: "live" },
-      credit: "حسام مقبلي",
-      desc: "نظام توصيل متكامل يربط الزبائن والمطاعم وموظفي التوصيل: طلبات لحظية، تتبع التوصيل، ولوحات تحكم متعددة الأدوار. منشور على سيرفر خاص مع SSL ومجموعة مراقبة كاملة (Prometheus + Grafana).",
-      features: [
-        "معالجة طلبات لحظية",
-        "تتبع التوصيل مباشرة",
-        "لوحات تحكم للمطاعم والإدارة",
-        "أداء محسّن عبر Redis",
-        "مراقبة كاملة في الإنتاج بـ Prometheus و Grafana"
-      ],
-      links: { demo: "https://jibli.ovh" }
-    }
-  },
-
-  {
-    id: "weldtrack", initial: "W",
-    cover: "linear-gradient(135deg,#1d4ed8,#1e3a8a)",
-    image: "assets/projects/weldtrack/cover.jpg",
-        gallery: [
-      "assets/projects/weldtrack/portail-verification.jpg",
-      "assets/projects/weldtrack/dashboard.jpg",
-      "assets/projects/weldtrack/soudeurs.jpg",
-      "assets/projects/weldtrack/verification.jpg"
-    ],
-    tech: ["Spring Boot","Flutter (Mobile/Web)","MySQL","JWT","BLoC","Clean Architecture"],
-    en: {
-      title: "WeldTrack", tagline: "Welder qualification management — industrial client",
-      status: { label: "Client project", type: "client" },
-      credit: "Houssem Meguebli",
-      desc: "A full-stack industrial application managing welder qualifications and certifications across a factory: real-time authorization checks, automated expiry alerts (90/30/7 days), a kiosk self-verification interface and printable QR-coded ID badges.",
-      features: [
-        "Real-time welder authorization checks against qualification rules",
-        "Automated expiry alerts at 90, 30 and 7 days",
-        "Kiosk-mode self-verification for the workshop floor",
-        "Printable CR80 ID badges with QR codes"
-      ],
-      links: { demo: "http://217.182.66.101/#/login" }
-    },
-    ar: {
-      title: "WeldTrack", tagline: "إدارة مؤهلات اللحّامين — عميل صناعي",
-      status: { label: "مشروع عميل", type: "client" },
-      credit: "حسام مقبلي",
-      desc: "تطبيق صناعي Full-Stack لإدارة مؤهلات وشهادات اللحّامين داخل المعمل: تحقق لحظي من الصلاحية، تنبيهات آلية قبل انتهاء الشهادات (90/30/7 أيام)، واجهة تحقق ذاتي بنمط Kiosk، وبطاقات تعريف مطبوعة مع رموز QR.",
-      features: [
-        "تحقق لحظي من صلاحية اللحّام حسب قواعد المؤهلات",
-        "تنبيهات آلية قبل انتهاء الشهادة بـ 90 و30 و7 أيام",
-        "واجهة Kiosk للتحقق الذاتي في الورشة",
-        "بطاقات تعريف CR80 مع QR قابلة للطباعة"
-      ],
-      links: { demo: "http://217.182.66.101/#/login" }
-    }
-  },
-
-  {
-    id: "zen", initial: "Z",
-    cover: "linear-gradient(135deg,#365314,#111a0a)",
-    image: "assets/projects/zen/poster.jpg",
-    video: { src: "assets/projects/zen/demo.mp4", poster: "assets/projects/zen/poster.jpg" },
-    tech: ["RAG","E5 embeddings","Row-level security","Multi-tenant","gpt-oss-120b (Groq)"],
-    en: {
-      title: "Zen Knowledge", tagline: "Internal knowledge assistant for multi-company groups",
-      status: { label: "Personal project", type: "personal" },
-      credit: "Yosra Megbli · 2026",
-      desc: "An assistant for organizations with several subsidiaries. Employees ask a question in plain language and get an answer built only from their own company's documents, with a source excerpt they can verify. When nothing relevant is found, it declines instead of guessing. Isolation between subsidiaries is enforced in the database, and admins get document-review alerts plus cost and latency monitoring.",
-      features: [
-        "Answers grounded in the company's own documents, with verifiable source excerpts",
-        "Declines to answer when no document is relevant enough — the LLM is not even called",
-        "Strict isolation between subsidiaries, enforced with row-level security",
-        "Local ingestion pipeline: extraction, chunking and E5 vectorization",
-        "Document governance: review dates, outdated-document alerts, one-click unpublishing",
-        "Admin dashboard: latency, cost per query, and unanswered questions that reveal documentation gaps"
-      ],
-      links: {}
-    },
-    ar: {
-      title: "Zen Knowledge", tagline: "مساعد معرفة داخلي للمجموعات متعددة الشركات",
-      status: { label: "مشروع شخصي", type: "personal" },
-      credit: "يسرى مقبلي · 2026",
-      desc: "مساعد للمؤسسات ذات الفروع المتعددة: يطرح الموظف سؤاله بلغته العادية فيحصل على إجابة مبنية فقط على وثائق شركته، مع مقتطف من المصدر يمكنه التحقق منه. وإذا لم يجد ما يكفي من المعلومات يمتنع عن الإجابة بدل التخمين. العزل بين الفروع مطبّق على مستوى قاعدة البيانات، وللإداريين تنبيهات مراجعة الوثائق ولوحة لمتابعة الكلفة وزمن الاستجابة.",
-      features: [
-        "إجابات مبنية على وثائق الشركة نفسها مع مقتطفات مصدر قابلة للتحقق",
-        "يمتنع عن الإجابة إذا لم توجد وثيقة ذات صلة كافية — دون استدعاء نموذج اللغة أصلاً",
-        "عزل صارم بين الفروع مطبّق عبر أمان مستوى الصف (RLS)",
-        "مسار استيعاب محلي: استخراج وتقطيع وتحويل إلى متجهات بنموذج E5",
-        "حوكمة الوثائق: تواريخ مراجعة وتنبيهات بالوثائق المتقادمة وإلغاء نشرها بنقرة",
-        "لوحة إدارة: زمن الاستجابة وكلفة كل سؤال والأسئلة بلا جواب التي تكشف نقص التوثيق"
-      ],
-      links: {}
-    }
-  },
-
-  {
-    id: "sophie", initial: "S",
-    cover: "linear-gradient(135deg,#7c3aed,#4c1d95)",
-    tech: ["FastAPI","Python","React","Telegram / WhatsApp APIs","YAML rules engine","pytest"],
-    en: {
-      title: "Sophie — AI Sales Agent", tagline: "Conversational AI agent that qualifies sales leads",
-      status: { label: "R&D · Demo-ready", type: "rnd" },
+      title: "Sophie",
+      tagline: "AI Sales Qualification Agent",
+      status: { label: "Client Pilot / Locally Tested", type: "client" },
       credit: "Yosra Megbli",
-      desc: "A production-grade conversational agent for the energy sector: a deterministic state machine + rules engine drive the conversation — the LLM only phrases replies, it never decides. Multi-channel (Telegram and web widget live; WhatsApp and voice wired), with an outbound campaign engine, an operations dashboard, and 583 automated tests including end-to-end conversation scenarios.",
+      desc: "AI-powered sales qualification system combining LLM-based language understanding with deterministic business rules.",
       features: [
-        "Deterministic state machine + YAML rules engine — the LLM never decides",
-        "Multi-channel: Telegram, web widget, WhatsApp & voice",
-        "Outbound campaign engine + operations dashboard",
-        "583 automated tests, incl. end-to-end golden conversations",
-        "Deployable as a self-contained product"
-      ],
-      links: { demo: "https://intelligent-sales-agent.onrender.com/dashboard/", code: "https://github.com/Yosra-Megbli/Intelligent-Sales-Agent" }
-    },
-    ar: {
-      title: "Sophie — وكيل مبيعات ذكي", tagline: "وكيل محادثة يقيّم العملاء المحتملين آلياً",
-      status: { label: "بحث وتطوير · جاهز للعرض", type: "rnd" },
-      credit: "يسرى مقبلي",
-      desc: "وكيل محادثة جاهز للإنتاج لقطاع الطاقة: آلة حالة حتمية + محرك قواعد تدير المحادثة، والـ LLM يصيغ الردود فقط دون أن يقرر. متعدد القنوات (Telegram وودجت الويب يعملان؛ WhatsApp والصوت مُعدّان)، مع محرك حملات صادرة ولوحة متابعة، و583 اختباراً آلياً يشمل سيناريوهات محادثة كاملة.",
-      features: [
-        "آلة حالة حتمية ومحرك قواعد — الـ LLM لا يقرر أبداً",
-        "قنوات متعددة: Telegram، ويب، WhatsApp والصوت",
-        "محرك حملات صادرة ولوحة تحكم عمليات",
-        "583 اختباراً آلياً بما فيها محادثات مرجعية كاملة",
-        "قابل للنشر كمنتج مستقل"
+        "580+ automated tests",
+        "Deterministic qualification logic",
+        "Client pilot",
+        "LLM handles language understanding while business decisions remain rule-driven"
       ],
       links: { code: "https://github.com/Yosra-Megbli/Intelligent-Sales-Agent" }
-    }
-  },
-
-  // ---------- More projects (internship & academic) ----------
-  {
-    id: "teleworkpro", initial: "T", group: "more",
-    cover: "linear-gradient(135deg,#0369a1,#0c4a6e)",
-    image: "assets/projects/teleworkpro/poster.jpg",
-    video: { src: "assets/projects/teleworkpro/demo.mp4", poster: "assets/projects/teleworkpro/poster.jpg" },
-    tech: [".NET Core","React","Entity Framework","SQL Server","Material-UI"],
-    en: {
-      title: "TeleWorkPro", tagline: "Remote-work request and scheduling platform",
-      status: { label: "Internship project", type: "internship" },
-      credit: "Houssem Meguebli · SHAMASH IT, 2024",
-      desc: "A web application built during an internship at SHAMASH IT to manage telecommuting requests and schedules. Employees submit requests, managers approve or reject them, and everyone follows the outcome on a shared calendar. Role-based access control cut request processing time by 40%.",
-      features: [
-        "Request workflow: submit, approve or reject, with status tracking",
-        "Calendar with month, week and day views",
-        "Requests table with status filter, search and PDF export",
-        "Employee management with role-based access",
-        "Secure password reset with a time-limited PIN code sent by email",
-        "Email notifications for account creation and request confirmations"
-      ],
-      links: {}
     },
     ar: {
-      title: "TeleWorkPro", tagline: "منصة لإدارة طلبات العمل عن بُعد وجداولها",
-      status: { label: "مشروع تدريب", type: "internship" },
-      credit: "حسام مقبلي · SHAMASH IT، 2024",
-      desc: "تطبيق ويب أُنجز خلال تدريب في SHAMASH IT لإدارة طلبات العمل عن بُعد وجداولها: يقدّم الموظف طلبه، ويوافق عليه المدير أو يرفضه، ويتابع الجميع النتيجة على تقويم مشترك. وقد خفّض التحكم في الصلاحيات حسب الدور زمن معالجة الطلبات بنسبة 40%.",
+      title: "Sophie",
+      tagline: "وكيل تأهيل المبيعات بالذكاء الاصطناعي",
+      status: { label: "تجربة عميل / مختبَر محلياً", type: "client" },
+      credit: "يسرى مقبلي",
+      desc: "نظام تأهيل مبيعات مدعوم بالذكاء الاصطناعي يجمع بين فهم اللغة بموديلات LLM وقواعد العمل الحتمية.",
       features: [
-        "مسار طلب كامل: تقديم، موافقة أو رفض، مع متابعة الحالة",
-        "تقويم بعرض شهري وأسبوعي ويومي",
-        "جدول طلبات مع تصفية بالحالة وبحث وتصدير PDF",
-        "إدارة الموظفين مع صلاحيات حسب الدور",
-        "استرجاع آمن لكلمة المرور برمز PIN محدود المدة يصل بالبريد",
-        "إشعارات بالبريد عند إنشاء الحساب وتأكيد الطلبات"
+        "أكثر من 580 اختباراً آلياً",
+        "منطق تأهيل حتمي",
+        "تجربة عميل",
+        "نموذج اللغة يفسّر اللغة بينما تظل قرارات العمل قائمة على القواعد"
       ],
-      links: {}
+      links: { code: "https://github.com/Yosra-Megbli/Intelligent-Sales-Agent" }
+    },
+    detail: {
+      problem: "Sales teams need a faster qualification flow without losing control over business decisions.",
+      solution: "Sophie combines LLM-driven language understanding with a deterministic rules engine to qualify leads consistently and route them intelligently.",
+      workflow: ["Lead / Conversation", "Intent & context extraction", "Qualification rules", "Decisioning & routing", "Follow-up or escalation"],
+      results: [
+        "580+ automated tests",
+        "Deterministic qualification logic",
+        "Client pilot",
+        "LLM = language understanding; rules = qualification and business decisions"
+      ]
     }
   },
-
   {
-    id: "coconsult", initial: "C", group: "more",
+    id: "document-intelligence",
+    no: "02",
+    initial: "DI",
     cover: "linear-gradient(135deg,#0f766e,#134e4a)",
-    image: "assets/projects/coconsult/poster.jpg",
-    video: { src: "assets/projects/coconsult/demo.mp4", poster: "assets/projects/coconsult/poster.jpg" },
-    tech: ["Spring","Angular","MySQL","Bootstrap"],
+    tech: ["OCR","Deep Learning","Django REST","Celery","Redis","Python"],
     en: {
-      title: "CoConsult", tagline: "HR and recruitment management web app",
-      status: { label: "Academic project", type: "academic" },
-      credit: "Houssem Meguebli · ESPRIT",
-      desc: "A web application for small businesses and startups that brings recruitment, employee management and team follow-up into one place: job offers with resume upload, departments, contracts, leave requests and team tasks, plus a built-in chatbot and chat.",
+      title: "Document Intelligence",
+      tagline: "AI Document Intelligence Pipeline",
+      status: { label: "Built and tested", type: "demo" },
+      credit: "Yosra Megbli",
+      desc: "Automated document processing pipeline covering OCR, document classification, information extraction and compliance validation.",
       features: [
-        "Job offers and applications with PDF resume upload",
-        "Departments, employee contracts and leave tracking",
-        "Team tasks with priorities and status",
-        "Employee claims management",
-        "Role-based dashboard with key indicators",
-        "Built-in chatbot and chat app"
+        "99.7% accuracy on an evaluated set of 313 documents",
+        "4 Tunisian document classes",
+        "24 document types",
+        "263-field structured JSON extraction"
       ],
       links: {}
     },
     ar: {
-      title: "CoConsult", tagline: "تطبيق ويب لإدارة الموارد البشرية والتوظيف",
-      status: { label: "مشروع أكاديمي", type: "academic" },
-      credit: "حسام مقبلي · ESPRIT",
-      desc: "تطبيق ويب للشركات الصغيرة والناشئة يجمع التوظيف وإدارة الموظفين ومتابعة الفريق في مكان واحد: عروض عمل مع رفع السيرة الذاتية، أقسام، عقود، طلبات إجازة ومهام فريق، إضافة إلى روبوت محادثة ودردشة مدمجين.",
+      title: "ذكاء المستندات",
+      tagline: "مسار ذكاء المستندات بالذكاء الاصطناعي",
+      status: { label: "تم تطويره واختباره", type: "demo" },
+      credit: "يسرى مقبلي",
+      desc: "مسار آلي لمعالجة المستندات يشمل OCR، تصنيف المستندات، استخراج المعلومات، والتحقق من الامتثال.",
       features: [
-        "عروض عمل وطلبات ترشح مع رفع السيرة الذاتية بصيغة PDF",
-        "الأقسام وعقود الموظفين ومتابعة الإجازات",
-        "مهام الفريق بأولويات وحالات",
-        "إدارة شكاوى الموظفين",
-        "لوحة تحكم بمؤشرات رئيسية حسب الدور",
-        "روبوت محادثة وتطبيق دردشة مدمجان"
+        "دقة 99.7% على مجموعة تقييمية من 313 مستنداً",
+        "4 فئات تونسية للمستندات",
+        "24 نوعاً من المستندات",
+        "استخراج JSON منظم بـ 263 حقلًا"
       ],
       links: {}
+    },
+    detail: {
+      problem: "Document-heavy workflows require reliable classification, extraction and validation without manual bottlenecks.",
+      solution: "This pipeline combines OCR, document classification and extraction logic into a structured validation workflow for operational use.",
+      workflow: ["Document", "OCR", "Classification", "Extraction", "Validation", "Structured Output"],
+      results: [
+        "99.7% accuracy on an evaluated set of 313 documents",
+        "4 Tunisian document classes",
+        "24 document types",
+        "263-field structured JSON extraction"
+      ]
     }
   },
-
   {
-    id: "infinityfarm", initial: "I", group: "more",
-    cover: "linear-gradient(135deg,#4d7c0f,#1a2e05)",
-    image: "assets/projects/infinityfarm/poster.jpg",
-    video: { src: "assets/projects/infinityfarm/demo.mp4", poster: "assets/projects/infinityfarm/poster.jpg" },
-    tech: ["Symfony","JavaScript","MySQL","Bootstrap"],
+    id: "multi-agent-rag-platform",
+    no: "03",
+    initial: "R",
+    cover: "linear-gradient(135deg,#0ea5e9,#164e63)",
+    tech: ["LangGraph","RAG","pgvector","FastAPI","PostgreSQL","Redis","Celery","Groq"],
     en: {
-      title: "InfinityFarm", tagline: "Farm management platform",
-      status: { label: "Academic project", type: "academic" },
-      credit: "Houssem Meguebli · ESPRIT team project",
-      desc: "A web platform that helps farmers run daily operations: organizing farm sites and land plots, tracking equipment and activities, and following income and expenses, with built-in messaging and statistics.",
+      title: "Multi-Agent RAG Platform",
+      tagline: "Modular AI platform for retrieval-augmented generation, agent orchestration and asynchronous AI workflows.",
+      status: { label: "Built and tested locally", type: "demo" },
+      credit: "Yosra Megbli",
+      desc: "Modular AI platform for retrieval-augmented generation, agent orchestration and asynchronous AI workflows.",
       features: [
-        "Farm sites and land plots with search and filters",
-        "Equipment tracking per site, with condition status",
-        "Activity planning with status tracking",
-        "Financial transactions grouped by category",
-        "Messages, complaints and statistics",
-        "Built-in chat"
+        "Agent orchestration with LangGraph",
+        "RAG retrieval backed by pgvector",
+        "Asynchronous execution with Redis and Celery",
+        "FastAPI-based orchestration layer"
       ],
       links: {}
     },
     ar: {
-      title: "InfinityFarm", tagline: "منصة لإدارة المزارع",
-      status: { label: "مشروع أكاديمي", type: "academic" },
-      credit: "حسام مقبلي · مشروع فريق في ESPRIT",
-      desc: "منصة ويب تساعد الفلاحين على تسيير عملهم اليومي: تنظيم المواقع الزراعية والقطع الأرضية، متابعة المعدات والأنشطة، ومراقبة المداخيل والمصاريف، مع مراسلة وإحصائيات مدمجة.",
+      title: "منصة RAG متعددة الوكلاء",
+      tagline: "منصة ذكاء اصطناعي معيارية للتوليد المعزز بالاسترجاع، تنسيق الوكلاء، وسير العمل غير المتزامن.",
+      status: { label: "تم تطويره واختباره محلياً", type: "demo" },
+      credit: "يسرى مقبلي",
+      desc: "منصة ذكاء اصطناعي معيارية للتوليد المعزز بالاسترجاع، تنسيق الوكلاء، وسير العمل غير المتزامن.",
       features: [
-        "المواقع الزراعية والقطع الأرضية مع بحث وتصفية",
-        "متابعة المعدات لكل موقع وحالتها",
-        "تخطيط الأنشطة ومتابعة حالتها",
-        "المعاملات المالية مصنّفة حسب الفئة",
-        "رسائل وشكاوى وإحصائيات",
-        "دردشة مدمجة"
+        "تنسيق الوكلاء عبر LangGraph",
+        "استرجاع RAG مدعوم بـ pgvector",
+        "تنفيذ غير متزامن مع Redis و Celery",
+        "طبقة تنسيق مبنية على FastAPI"
       ],
       links: {}
+    },
+    detail: {
+      problem: "Knowledge-intensive workflows need modular retrieval, orchestration, and resilient asynchronous execution.",
+      solution: "The platform separates retrieval, agent orchestration and workflow execution to support flexible AI systems and multi-step reasoning patterns.",
+      workflow: ["User", "Retrieval", "Agents / Orchestration", "LLM", "Response"],
+      results: [
+        "LangGraph orchestration layer",
+        "RAG retrieval with pgvector",
+        "Redis + Celery async workflows",
+        "FastAPI + PostgreSQL foundation"
+      ]
+    }
+  },
+  {
+    id: "ai-invoice-processing",
+    no: "04",
+    initial: "I",
+    cover: "linear-gradient(135deg,#f59e0b,#a16207)",
+    tech: ["n8n","LLM","PostgreSQL","Automation"],
+    en: {
+      title: "AI Invoice Processing",
+      tagline: "AI Invoice Processing & Automation",
+      status: { label: "Prototype / Tested", type: "demo" },
+      credit: "Yosra Megbli",
+      desc: "Automated invoice extraction and structured data processing using LLMs, PostgreSQL and workflow automation.",
+      features: [
+        "Automated invoice extraction",
+        "Structured data processing",
+        "PostgreSQL-backed workflow storage",
+        "Automation with n8n"
+      ],
+      links: {}
+    },
+    ar: {
+      title: "معالجة فواتير الذكاء الاصطناعي",
+      tagline: "معالجة الفواتير والأتمتة بالذكاء الاصطناعي",
+      status: { label: "نموذج أولي / مختبر", type: "demo" },
+      credit: "يسرى مقبلي",
+      desc: "استخراج فواتير آلي ومعالجة بيانات منظمة باستخدام LLMs، PostgreSQL، وأتمتة سير العمل.",
+      features: [
+        "استخراج فواتير آلي",
+        "معالجة بيانات منظمة",
+        "تخزين سير العمل داخل PostgreSQL",
+        "أتمتة عبر n8n"
+      ],
+      links: {}
+    },
+    detail: {
+      problem: "Invoice-heavy operations need fast extraction and structured processing without manual re-entry.",
+      solution: "The workflow uses LLM-based extraction and automation tooling to convert invoices into structured records for downstream processing.",
+      workflow: ["Invoice intake", "Extraction", "Validation", "PostgreSQL storage", "Automation flow"],
+      results: [
+        "Automated invoice extraction",
+        "Structured data processing",
+        "PostgreSQL workflow storage",
+        "Prototype / tested automation workflows"
+      ]
     }
   }
 ];
