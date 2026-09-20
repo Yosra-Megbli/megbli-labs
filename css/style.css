@@ -76,6 +76,12 @@ section{padding:78px 0}
 .badge.client{background:#dbeafe;color:#1e40af}
 .badge.demo{background:#fef3c7;color:#92400e}
 .badge.rnd{background:#ede9fe;color:#5b21b6}
+.badge.personal{background:#cffafe;color:#155e75}
+.badge.internship{background:#fce7f3;color:#9d174d}
+.badge.academic{background:#e0e7ff;color:#3730a3}
+.vtag{position:absolute;inset-inline-start:12px;bottom:12px;background:rgba(19,24,34,.78);color:#fff;font-size:.74rem;font-weight:600;padding:4px 11px;border-radius:999px;font-style:normal}
+.subhead{margin:56px 0 6px;font-size:1.2rem;font-weight:800;letter-spacing:-.01em}
+.subhead-lead{color:var(--muted);font-size:.94rem;margin-bottom:22px}
 
 /* process */
 .process{list-style:none;counter-reset:step;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
@@ -102,6 +108,8 @@ section{padding:78px 0}
 .phead .tagline{color:var(--muted);font-size:1.05rem}
 .pcover{border-radius:var(--radius);overflow:hidden;margin:30px 0;aspect-ratio:16/8;display:flex;align-items:center;justify-content:center}
 .pcover span{font-size:5rem;font-weight:800;color:rgba(255,255,255,.16)}
+.pvideo{margin:30px 0}
+.pvideo video{width:100%;display:block;border-radius:var(--radius);background:#0b0f14;border:1px solid var(--line);max-height:78vh}
 .desc-lg{font-size:1.02rem;color:var(--ink);max-width:760px;margin-bottom:10px}
 .features{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin:22px 0 26px}
 .features li{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;font-size:.94rem;display:flex;gap:10px;align-items:flex-start}
