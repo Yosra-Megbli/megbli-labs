@@ -39,6 +39,37 @@ function badge(status) {
   return `<span class="badge ${statusClass(status)}">${esc(status)}</span>`;
 }
 
+const CONTACT_EMAIL = 'yosra.meguebli@yahoo.fr';
+
+function mailFallback(subject) {
+  const c = t('contact');
+  const gmail = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(CONTACT_EMAIL)}&su=${encodeURIComponent(subject)}`;
+  return `<div class="contact-alt"><span>${esc(c.mail_alt)}</span><code dir="ltr">${esc(CONTACT_EMAIL)}</code><button type="button" class="copy-btn" data-copy="${esc(CONTACT_EMAIL)}">${esc(c.copy)}</button><a href="${esc(gmail)}" target="_blank" rel="noopener">${esc(c.gmail)}</a></div>`;
+}
+
+function renderMailFallback() {
+  const el = $('#mail-fallback');
+  if (el) el.innerHTML = mailFallback('Project inquiry');
+}
+
+document.addEventListener('click', async e => {
+  const btn = e.target.closest('[data-copy]');
+  if (!btn) return;
+  const text = btn.dataset.copy;
+  try {
+    await navigator.clipboard.writeText(text);
+  } catch {
+    const ta = document.createElement('textarea');
+    ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
+    document.body.appendChild(ta); ta.select();
+    try { document.execCommand('copy'); } catch {}
+    ta.remove();
+  }
+  const label = btn.textContent;
+  btn.textContent = t('contact.copied');
+  setTimeout(() => { btn.textContent = label; }, 1800);
+});
+
 const hasDemo = p => Boolean(p.demoAccess && ((p.demoAccess.user && p.demoAccess.pass) || p.demoAccess.key));
 
 function demoBox(p) {
@@ -52,7 +83,7 @@ function demoBox(p) {
   }
   const msg = encodeURIComponent(m.demoRequestText.replace('{name}', p.title));
   const subject = encodeURIComponent(m.demoRequestSubject.replace('{name}', p.title));
-  return `<section class="demo-box"><h3>${esc(m.demoTitle)}</h3><p>${esc(m.demoLocked)}</p><div class="pactions"><a class="btn btn-wa" href="https://wa.me/21628771979?text=${msg}" target="_blank" rel="noopener">${esc(m.demoRequest)}</a><a class="btn btn-mail" href="mailto:yosra.meguebli@yahoo.fr?subject=${subject}">Email</a></div></section>`;
+  return `<section class="demo-box"><h3>${esc(m.demoTitle)}</h3><p>${esc(m.demoLocked)}</p><div class="pactions"><a class="btn btn-wa" href="https://wa.me/21628771979?text=${msg}" target="_blank" rel="noopener">${esc(m.demoRequest)}</a><a class="btn btn-mail" href="mailto:yosra.meguebli@yahoo.fr?subject=${subject}">Email</a></div>${mailFallback(decodeURIComponent(subject))}</section>`;
 }
 
 function renderServices() {
@@ -137,7 +168,7 @@ function setLang(lang) {
   }
   const footer = $('[data-i18n="footer"]');
   if (footer) footer.textContent = t('footer').replace('{year}', new Date().getFullYear());
-  renderServices(); renderProcess(); renderTeam(); renderProjects();
+  renderServices(); renderProcess(); renderTeam(); renderProjects(); renderMailFallback();
   if (document.body.dataset.page === 'project') renderProjectPage();
 }
 

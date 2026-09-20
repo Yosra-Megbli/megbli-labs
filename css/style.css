@@ -468,6 +468,42 @@ section {
   gap: 14px;
 }
 
+.contact-alt {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px 10px;
+  margin-top: 22px;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+.contact-alt code {
+  padding: 4px 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface-alt);
+  color: var(--ink);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.9rem;
+  user-select: all;
+}
+.copy-btn {
+  padding: 5px 13px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+.copy-btn:hover,
+.copy-btn:focus-visible { border-color: var(--accent); color: var(--accent); }
+.contact-alt a { color: var(--accent); font-weight: 700; }
+.demo-box .contact-alt { justify-content: flex-start; margin-top: 16px; }
+
 .page-wrap {
   padding: 52px 0 70px;
 }
