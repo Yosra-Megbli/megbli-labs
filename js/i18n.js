@@ -186,7 +186,7 @@ const PROJECTS = [
         "Redis-powered performance optimization",
         "Production monitoring with Prometheus & Grafana"
       ],
-      links: {}
+      links: { demo: "https://jibli.ovh" }
     },
     ar: {
       title: "جيبلِي", tagline: "منصة توصيل طعام — تعمل في الإنتاج",
@@ -200,7 +200,7 @@ const PROJECTS = [
         "أداء محسّن عبر Redis",
         "مراقبة كاملة في الإنتاج بـ Prometheus و Grafana"
       ],
-      links: {}
+      links: { demo: "https://jibli.ovh" }
     }
   },
 
@@ -220,7 +220,7 @@ const PROJECTS = [
         "Kiosk-mode self-verification for the workshop floor",
         "Printable CR80 ID badges with QR codes"
       ],
-      links: {}
+      links: { demo: "http://217.182.66.101/#/login" }
     },
     ar: {
       title: "WeldTrack", tagline: "إدارة مؤهلات اللحّامين — عميل صناعي",
@@ -233,7 +233,7 @@ const PROJECTS = [
         "واجهة Kiosk للتحقق الذاتي في الورشة",
         "بطاقات تعريف CR80 مع QR قابلة للطباعة"
       ],
-      links: {}
+      links: { demo: "http://217.182.66.101/#/login" }
     }
   },
 
