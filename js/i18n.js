@@ -294,7 +294,7 @@ const PROJECTS = [
         "583 automated tests, incl. end-to-end golden conversations",
         "Deployable as a self-contained product"
       ],
-      links: { code: "https://github.com/Yosra-Megbli/Intelligent-Sales-Agent" }
+      links: { demo: "https://intelligent-sales-agent.onrender.com/dashboard/", code: "https://github.com/Yosra-Megbli/Intelligent-Sales-Agent" }
     },
     ar: {
       title: "Sophie — وكيل مبيعات ذكي", tagline: "وكيل محادثة يقيّم العملاء المحتملين آلياً",
