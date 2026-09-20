@@ -211,6 +211,12 @@ const PROJECTS = [
     id: "weldtrack", initial: "W",
     cover: "linear-gradient(135deg,#1d4ed8,#1e3a8a)",
     image: "assets/projects/weldtrack/cover.jpg",
+        gallery: [
+      "assets/projects/weldtrack/portail-verification.jpg",
+      "assets/projects/weldtrack/dashboard.jpg",
+      "assets/projects/weldtrack/soudeurs.jpg",
+      "assets/projects/weldtrack/verification.jpg"
+    ],
     tech: ["Spring Boot","Flutter (Mobile/Web)","MySQL","JWT","BLoC","Clean Architecture"],
     en: {
       title: "WeldTrack", tagline: "Welder qualification management — industrial client",
