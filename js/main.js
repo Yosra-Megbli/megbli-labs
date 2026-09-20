@@ -26,26 +26,31 @@ function renderTeam() {
     </article>`).join("");
 }
 
+function coverStyle(p) { return p.image ? `url('${p.image}') center/cover no-repeat` : p.cover; }
+
+function projectCard(p, W) {
+  const d = p[LANG];
+  const links = [
+    d.links.demo ? `<a href="${d.links.demo}" target="_blank" rel="noopener">${W.demo} ↗</a>` : "",
+    d.links.code ? `<a href="${d.links.code}" target="_blank" rel="noopener">${W.code} ↗</a>` : "",
+    `<a href="project.html?p=${p.id}">${W.view}</a>`
+  ].filter(Boolean).join("");
+  return `
+  <article class="card project">
+    <a class="cover" href="project.html?p=${p.id}" aria-label="${d.title}" style="background:${coverStyle(p)}">${p.image ? "" : `<span>${p.initial}</span>`}${p.video ? `<em class="vtag">▶ ${W.video}</em>` : ""}</a>
+    <div class="body">
+      <div class="meta">${badge(d.status)}<span class="credit">${d.credit}</span></div>
+      <h3>${d.title}</h3><p class="tagline">${d.tagline}</p><p class="desc">${d.desc}</p>
+      <div class="chips">${p.tech.map(x => `<span class="chip">${x}</span>`).join("")}</div>
+      <div class="links">${links}</div>
+    </div>
+  </article>`;
+}
+
 function renderProjects() {
   const W = I18N[LANG].work;
-  $("#projects-grid").innerHTML = PROJECTS.map(p => {
-    const d = p[LANG];
-    const links = [
-      d.links.demo ? `<a href="${d.links.demo}" target="_blank" rel="noopener">${W.demo} ↗</a>` : "",
-      d.links.code ? `<a href="${d.links.code}" target="_blank" rel="noopener">${W.code} ↗</a>` : "",
-      `<a href="project.html?p=${p.id}">${W.view}</a>`
-    ].filter(Boolean).join("");
-    return `
-    <article class="card project">
-      <div class="cover" style="background:${p.image ? `url('${p.image}') center/cover no-repeat` : p.cover}">${p.image ? "" : `<span>${p.initial}</span>`}</div>
-      <div class="body">
-        <div class="meta">${badge(d.status)}<span class="credit">${d.credit}</span></div>
-        <h3>${d.title}</h3><p class="tagline">${d.tagline}</p><p class="desc">${d.desc}</p>
-        <div class="chips">${p.tech.map(x => `<span class="chip">${x}</span>`).join("")}</div>
-        <div class="links">${links}</div>
-      </div>
-    </article>`;
-  }).join("");
+  $("#projects-grid").innerHTML = PROJECTS.filter(p => p.group !== "more").map(p => projectCard(p, W)).join("");
+  if ($("#more-grid")) $("#more-grid").innerHTML = PROJECTS.filter(p => p.group === "more").map(p => projectCard(p, W)).join("");
 }
 
 function renderProjectPage() {
@@ -63,7 +68,9 @@ function renderProjectPage() {
       <div class="meta">${badge(d.status)}<span class="credit">${d.credit}</span></div>
       <h1>${d.title}</h1><p class="tagline">${d.tagline}</p>
     </div>
-    <div class="pcover" style="background:${p.image ? `url('${p.image}') center/cover no-repeat` : p.cover}">${p.image ? "" : `<span>${p.initial}</span>`}</div>
+    ${p.video
+      ? `<div class="pvideo"><video controls playsinline preload="metadata" poster="${p.video.poster}"><source src="${p.video.src}" type="video/mp4"></video></div>`
+      : `<div class="pcover" style="background:${coverStyle(p)}">${p.image ? "" : `<span>${p.initial}</span>`}</div>`}
     ${p.gallery ? `<div class="gallery">${p.gallery.map(src => `<img src="${src}" loading="lazy" alt="${d.title}">`).join("")}</div>` : ""}
     <p class="desc-lg">${d.desc}</p>
     <ul class="features">${d.features.map(f => `<li>${f}</li>`).join("")}</ul>
