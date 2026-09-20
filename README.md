@@ -1,5 +1,10 @@
 # Megbli Labs — Portfolio
 
+Portfolio of Megbli Labs, a three-engineer software studio (web, mobile and AI).
+
+**Live site:** https://yosra-megbli.github.io/megbli-labs/
+**Profile:** https://github.com/Yosra-Megbli
+
 ## Deploy on GitHub Pages (free)
 1. Create a public GitHub repo named `megbli-labs`
 2. Upload all files (index.html, project.html, css/, js/)
